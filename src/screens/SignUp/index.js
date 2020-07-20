@@ -25,15 +25,15 @@ const SignUp = props => {
             <div className="d-flex flex-column h-100">
                 <form onSubmit={submitHandler}>
                     <div className="form-group">
-                        <label htmlFor="">Email</label>
+                        <label htmlFor="email">Email</label>
                         <input type="text" className="form-control" name="email" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="">Password</label>
+                        <label htmlFor="password">Password</label>
                         <input type="password" className="form-control" name="password" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="">Password Confirmation</label>
+                        <label htmlFor="password_confirmation">Password Confirmation</label>
                         <input type="password" className="form-control" name="password_confirmation" />
                     </div>
                     <div>
