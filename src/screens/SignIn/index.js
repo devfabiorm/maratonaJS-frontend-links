@@ -6,15 +6,13 @@ import { signIn } from './SignInActions';
 
 const SignIn = props => {
 
-    const { account, signIn } = props;
+    const { signIn } = props;
 
     const submitHandler = e => {
         e.preventDefault();
 
         signIn({ email: 'fabio.ribeiro-martins@live.com', password: '123456' })
     }
-    
-    console.log('*** SignIn.account', account);
 
     return(
         <div className="container h-100 pt-5">
