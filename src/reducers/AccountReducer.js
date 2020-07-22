@@ -1,5 +1,5 @@
-import { setAccount, setToken, setRefreshToken, removeAccount, removeRefreshToken, removeToken } from '../helpers/account';
-import { SIGN_IN, SIGN_UP, SIGN_OUT } from '../actions/AccountActions';
+import { setAccount, setToken, setRefreshToken, removeAccount, removeRefreshToken, removeToken, getAccount } from '../helpers/account';
+import { SIGN_IN, SIGN_UP, SIGN_OUT, INIT_ACCOUNT } from '../actions/AccountActions';
 
 const initialState = {
     account : null,
@@ -30,6 +30,12 @@ export default function(state = initialState, action) {
             removeRefreshToken();
             
             return { ...state, account: null }
+
+        case INIT_ACCOUNT: {
+            const account = getAccount();
+            
+            return { ...state, account };
+        }
         
         default:
             return state;
