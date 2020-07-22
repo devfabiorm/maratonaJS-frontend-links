@@ -1,27 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { connect } from 'react-redux'
 
+import { linkGet } from '../../../../actions/LinkActions';
+import FormGroup from '../../../../components/FormGroup';
 import Layout from '../../../Layouts/Manage';
+import FormCheck from '../../../../components/FormCheck';
 
-const Edit = () => {
+const Edit = ({ link, linkGet }) => {
+    const { id } = useParams();
+
+    useEffect(() => {
+        linkGet(id);
+    }, [id, linkGet]);
+    
     return (
         <Layout>
             <h1>Edit Link</h1>
             <div>
                 <form action="">
-                    <div className="form-group">
-                        <label htmlFor="">Label</label>
-                        <input type="text" className="form-control" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="">Url</label>
-                        <input type="text" className="form-control" />
-                    </div>
-                    <div className="form-group form-check">
-                        <label className="form-check-label">
-                            <input type="checkbox" name="isSocial" />
-                            <span className="form-check-sign">Is Social</span>
-                        </label>
-                    </div>
+                    <FormGroup label="Label" name="label" type="text" data={link} />
+                    <FormGroup label="Url" name="url" type="text" data={link} />
+                    <FormCheck label="Is Social" name="isSocial" data={link} />
                     <div>
                         <button className="btn btn-primary btn-round">Submit</button>
                     </div>
@@ -31,4 +31,8 @@ const Edit = () => {
     );
 };
 
-export default Edit;
+const mapStateToProps = state => {
+    return { link: state.link.link }
+};
+
+export default connect(mapStateToProps, { linkGet })(Edit);
