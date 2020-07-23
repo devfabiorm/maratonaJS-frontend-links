@@ -5,7 +5,6 @@ export const getTokenExpire = token => {
 
         const data = JSON.parse(atob(payload));
         const expires = data ? data.exp : 0;
-
         return expires;
     } catch (error) {
         return 0;

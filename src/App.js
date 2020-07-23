@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import Home from './screens/Home';
@@ -11,7 +11,7 @@ import ManageLinksEdit from './screens/Manage/Links/Edit';
 
 import { initAccount } from './actions/AccountActions';
 
-const App = ({ initAccount, account }) => {
+const App = ({ initAccount }) => {
 
     useEffect(() => {
        initAccount(); 
@@ -20,15 +20,6 @@ const App = ({ initAccount, account }) => {
     return (
         <BrowserRouter>
             <div>
-                <nav>
-                    <ul className="list-group list-group-horizontal">
-                        <li className="list-group-item"><Link to="/sign-in">Sign in</Link></li>
-                        <li className="list-group-item"><Link to="/sign-up">Sign up</Link></li>
-                        <li className="list-group-item"><Link to="/manage/links/create">Create Link</Link></li>
-                        <li className="list-group-item"><Link to="/manage/links/edit">Edit Link</Link></li>
-                        <li className="list-group-item"><Link to="/manage/links">Links</Link></li>
-                    </ul>
-                </nav>
                 <Switch>
                     <Route path="/sign-in"><SignIn /></Route>
                     <Route path="/sign-up"><SignUp /></Route>
