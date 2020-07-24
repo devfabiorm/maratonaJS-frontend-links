@@ -1,6 +1,6 @@
 ![MaratonaJS](http://s3.emerson.link/prints/2020-07-05-074937-06n3n.png)
 
-The MaratonaJS was a total free event whre the instructor [@emersonbrogadev](https://www.instagram.com/emersonbrogadev/)
+The MaratonaJS was a total free event where the instructor [@emersonbrogadev](https://www.instagram.com/emersonbrogadev/)
 teach us how to built an API using NodeJS and ExpressJS, also using the lib JOI for validation and JWT to navigation and sessions control.
 
 Link to back-end here:
@@ -19,6 +19,16 @@ this project was built using:
 - [bootstrap](https://getbootstrap.com/)
 - [universal-cookie](https://github.com/reactivestack/cookies/tree/master/packages/universal-cookie)
 
+## 💻 The Project
+
+This project is a simple link manager
+
 It is compose of a basic CRUD with three pages for create, edit and list a link, and on list list you can delete a link.
 
 ![CreateLink](https://github.com/devfabiorm/maratonaJS-frontend-links/blob/master/images/Create%20Link.jpg)
+![ListLinks](https://github.com/devfabiorm/maratonaJS-frontend-links/blob/master/images/List%20links.jpg)
+![EditLink](https://github.com/devfabiorm/maratonaJS-frontend-links/blob/master/images/Edit%20Link.jpg)
+![DeleteLink](https://github.com/devfabiorm/maratonaJS-frontend-links/blob/master/images/Delete%20Link.jpg)
+
+
+
