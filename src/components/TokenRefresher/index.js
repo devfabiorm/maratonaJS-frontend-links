@@ -5,7 +5,7 @@ import { getToken } from '../../helpers/account';
 import { getTokenExpire } from '../../helpers/jwt';
 import { getFreshToken } from '../../actions/AccountActions';
 
-const TokenRefresher = ({ getFreshToken }) => {
+const TokenRefresher = ({ account, getFreshToken }) => {
     const TRESHOLD = 30;
     const calculate = () => {
         const token = getToken();
@@ -18,9 +18,9 @@ const TokenRefresher = ({ getFreshToken }) => {
 
     useEffect(() => {
         const secondsToExpire = calculate() - TRESHOLD;
-        const id = setTimeout(getFreshToken, secondsToExpire * 1000);
+        const id = secondsToExpire > 0 ? setTimeout(getFreshToken, secondsToExpire * 1000) : null;
         return () => clearTimeout(id);
-    }, [getFreshToken]);
+    }, [account, getFreshToken]);
 
 
     return null;
