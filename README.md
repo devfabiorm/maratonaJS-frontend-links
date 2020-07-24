@@ -25,23 +25,17 @@ This project is a simple link manager
 
 It is compose of a basic CRUD with three pages for create, edit and list a link, and on list list you can delete a link.
 
-## Page to include a new link for management
+## Pages
 ![CreateLink](https://github.com/devfabiorm/maratonaJS-frontend-links/blob/master/images/Create%20Link.jpg)
 <br />
 <hr />
 <br />
-## Page to list all included links
 ![ListLinks](https://github.com/devfabiorm/maratonaJS-frontend-links/blob/master/images/List%20links.jpg)
 <br />
 <hr />
 <br />
-## Page to Edit a selected link by clinking on the button "edit" on List page
 ![EditLink](https://github.com/devfabiorm/maratonaJS-frontend-links/blob/master/images/Edit%20Link.jpg)
 <br />
 <hr />
 <br />
-## Showing a modal-like box when the delete button on the List page is clicked to delete the item selected
 ![DeleteLink](https://github.com/devfabiorm/maratonaJS-frontend-links/blob/master/images/Delete%20Link.jpg)
-
-
-
